@@ -16,4 +16,7 @@
     </div>
   </div>
 </template>
-<script setup></script>
+<script setup>
+import img from '../assets/images/artmaybe.jpg'
+console.log(img)
+</script>
