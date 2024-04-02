@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="hero min-h-svh w-full"
-    style="background-image: url('/src/assets/images/artmaybe.jpg')"
-  >
+  <div class="hero min-h-svh w-full" :style="{ backgroundImage: `url(${imgSrc})` }">
     <div class="hero-overlay bg-opacity-60"></div>
     <div class="hero-content text-center text-neutral-content">
       <div class="max-w-md">
@@ -18,5 +15,6 @@
 </template>
 <script setup>
 import img from '../assets/images/artmaybe.jpg'
-console.log(img)
+import { ref } from 'vue'
+const imgSrc = ref(img)
 </script>
