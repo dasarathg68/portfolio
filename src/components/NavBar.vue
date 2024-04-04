@@ -22,29 +22,42 @@
           tabindex="0"
           class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
         >
-          <li><a>Home</a></li>
-          <li><a>Services</a></li>
-          <li><a>Portfolio</a></li>
-          <li><a>Resume</a></li>
+          <li @click="navigateToLink('')"><a>Home</a></li>
+          <li @click="navigateToLink('services')"><a>Services</a></li>
+          <li @click="navigateToLink('portfolio')"><a>Portfolio</a></li>
+          <li @click="navigateToLink('resume')"><a>Resume</a></li>
         </ul>
       </div>
       <div class="dropdown dropdown-end">
-        <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+        <div
+          tabindex="0"
+          role="button"
+          class="btn btn-ghost btn-circle avatar"
+          @click="navigateToLink('')"
+        >
           <div class="w-10 rounded-full">
             <img alt="Tailwind CSS Navbar component" src="../assets/images/dachu.jpg" />
           </div>
         </div>
       </div>
-      <a class="btn btn-ghost text-xl">Dasarath G</a>
+      <a class="btn btn-ghost text-xl" @click="navigateToLink('')">Dasarath G</a>
     </div>
     <div class="navbar-end hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
-        <li><a>Home</a></li>
-        <li><a>Services</a></li>
-        <li><a>Portfolio</a></li>
-        <li><a>Resume</a></li>
+        <li @click="navigateToLink('')"><a>Home</a></li>
+        <li @click="navigateToLink('services')"><a>Services</a></li>
+        <li @click="navigateToLink('portfolio')"><a>Portfolio</a></li>
+        <li @click="navigateToLink('resume')"><a>Resume</a></li>
       </ul>
     </div>
   </div>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+function navigateToLink(id: string) {
+  console.log(id)
+  router.push('/' + id)
+}
+</script>
