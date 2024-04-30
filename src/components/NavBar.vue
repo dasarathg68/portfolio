@@ -26,6 +26,32 @@
           <li @click="navigateToLink('services')"><a>Services</a></li>
           <li @click="navigateToLink('portfolio')"><a>Portfolio</a></li>
           <li @click="navigateToLink('resume')"><a>Resume</a></li>
+          <li>
+            <div class="dropdown">
+              <div tabindex="0">
+                Theme
+                <span class="badge text-xs bg-blue-300">New</span>
+              </div>
+
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content z-[1] bg-base-100 rounded-box w-32 mt-80"
+              >
+                <li v-for="theme in themesAvailable" :key="theme">
+                  <div
+                    type="radio"
+                    name="dropdown"
+                    class="btn btn-sm btn-ghost"
+                    :aria-label="theme"
+                    :value="theme"
+                    @click="emits('themeChanged', theme)"
+                  >
+                    {{ theme }}
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </div>
       <div class="dropdown dropdown-end">
@@ -40,24 +66,54 @@
           </div>
         </div>
       </div>
-      <a class="btn btn-ghost text-xl" @click="navigateToLink('')">Dasarath G</a>
+
+      <a class="btn btn-ghost text-xl menu-dropdown" @click="navigateToLink('')">Dasarath G</a>
     </div>
     <div class="navbar-end hidden lg:flex">
-      <ul class="menu menu-horizontal px-1">
+      <ul class="menu menu-horizontal">
         <li @click="navigateToLink('')"><a>Home</a></li>
         <li @click="navigateToLink('about')"><a>About</a></li>
         <li @click="navigateToLink('services')"><a>Services</a></li>
         <li @click="navigateToLink('portfolio')"><a>Portfolio</a></li>
+        <li>
+          <div class="dropdown">
+            <div tabindex="0">
+              Theme
+              <span class="badge text-xs bg-blue-300">New</span>
+            </div>
+
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content z-[1] bg-base-100 rounded-box w-32 mt-80"
+            >
+              <li v-for="theme in themesAvailable" :key="theme">
+                <div
+                  type="radio"
+                  name="dropdown"
+                  class="btn btn-sm btn-ghost"
+                  :aria-label="theme"
+                  :value="theme"
+                  @click="emits('themeChanged', theme)"
+                >
+                  {{ theme }}
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
 </template>
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
-
+import { ref, watch } from 'vue'
+const props = defineProps<{
+  themesAvailable: string[]
+}>()
+const emits = defineEmits(['themeChanged'])
 const router = useRouter()
 function navigateToLink(id: string) {
-  console.log(id)
   router.push('/' + id)
 }
 </script>
