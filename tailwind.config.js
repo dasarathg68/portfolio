@@ -8,6 +8,6 @@ export default {
   },
   plugins: [daisyui],
   daisyui: {
-    themes: ['light', 'dark', 'cyberpunk', 'cupcake', 'retro', 'synthwave', 'garden']
+    themes: ['light', 'dark', 'cyberpunk', 'cupcake', 'retro', 'synthwave', 'garden', 'lofi']
   }
 }
