@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 import NavBar from '@/components/NavBar.vue'
 import { ref } from 'vue'
-import TheDrawer from '@/components/TheDrawer.vue'
 import TheFooter from '@/components/TheFooter.vue'
 import { themes } from '@/utils/themes'
 
