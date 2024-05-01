@@ -29,7 +29,7 @@
           <li>
             <div class="dropdown">
               <div tabindex="0">
-                Theme
+                Themes
                 <span class="badge text-xs bg-blue-300">New</span>
               </div>
 
@@ -78,7 +78,7 @@
         <li>
           <div class="dropdown">
             <div tabindex="0">
-              Theme
+              Themes
               <span class="badge text-xs bg-blue-300">New</span>
             </div>
 
