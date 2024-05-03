@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-16">
+  <div>
     <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
       <li>
         <div className="timeline-start md:text-end mb-10">
