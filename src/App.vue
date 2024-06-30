@@ -6,7 +6,7 @@ import TheFooter from '@/components/TheFooter.vue'
 import { themes } from '@/utils/themes'
 
 const themesAvailable = ref(themes.themes)
-const currentTheme = ref('cyberpunk')
+const currentTheme = ref('lofi')
 </script>
 
 <template>

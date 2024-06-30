@@ -24,6 +24,8 @@
         >
           <li @click="navigateToLink('')"><a>Home</a></li>
           <li @click="navigateToLink('services')"><a>Services</a></li>
+          <li @click="navigateToLink('timeline')"><a>Timeline</a></li>
+
           <li @click="navigateToLink('portfolio')"><a>Portfolio</a></li>
           <li @click="navigateToLink('resume')"><a>Resume</a></li>
           <li>
@@ -72,7 +74,7 @@
     <div class="navbar-end hidden lg:flex">
       <ul class="menu menu-horizontal">
         <li @click="navigateToLink('')"><a>Home</a></li>
-        <li @click="navigateToLink('about')"><a>About</a></li>
+        <li @click="navigateToLink('timeline')"><a>Timeline</a></li>
         <li @click="navigateToLink('services')"><a>Services</a></li>
         <li @click="navigateToLink('portfolio')"><a>Portfolio</a></li>
         <li>
